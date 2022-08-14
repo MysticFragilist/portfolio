@@ -1,0 +1,6 @@
+{
+  "title": "Terminale",
+  "commands": {
+    "change-lang": "Changement au language {{locale}} avec succès!"
+  }
+}
