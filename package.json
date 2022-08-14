@@ -10,7 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap": "^5.2.0",
-    "framer-motion": "^7.0.0",
+    "framer-motion": "^7.1.0",
     "next": "latest",
     "next-i18next": "^11.3.0",
     "next-translate": "^1.5.0",
