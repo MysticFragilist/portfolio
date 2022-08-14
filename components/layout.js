@@ -1,6 +1,7 @@
 import globalStyles from "../styles/global";
 
 import Head from "next/head";
+import Image from 'next/image';
 
 import NavBar from "./navbar";
 
@@ -13,7 +14,7 @@ export default function Layout(props) {
       </Head>
 
       <NavBar />
-      
+
       {props.children}
       <style jsx global>
         {globalStyles}
@@ -27,7 +28,7 @@ export default function Layout(props) {
           className="linkPowered"
         >
           Powered by{' '}
-          <img src="/Nextjs-logo.svg" alt="Vercel" className="logo" />
+          <Image src="/Nextjs-logo.svg" alt="Vercel" className="logo" />
         </a>
       </footer>
 

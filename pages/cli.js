@@ -81,7 +81,7 @@ export default function Terminal() {
           commands={commands}
           theme="material-dark"
           prompt="sam@cli 👉"
-          welcomeMessage={ <p>Welcome to Sam CLI! If you don't know what to do, try the command <code>help</code></p>}
+          welcomeMessage={ <p>Welcome to Sam CLI! If you don&apos;t know what to do, try the command <code>help</code></p>}
           showControlButtons={false}
           errorMessage={
             () => (<p style={{ color: "red", display: "inline" }}>Invalid command found, try the command <code>help</code> to find all available commands.</p>)
