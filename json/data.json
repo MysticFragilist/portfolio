@@ -1,0 +1,179 @@
+{
+  "name": "Samuel Montambault",
+  "short_name": "Sam",
+  "description": "Samuel Montambault's personal website",
+  "projects": [
+    {
+      "name": "Computercraft Blockchain",
+      "repository": "MysticFragilist/blockchain-cc",
+      "description": "A Computercraft blockchain implementation in LUA.",
+      "visibility": "public",
+      "lastUpdated": "19h",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/blockchain-cc"
+    },
+    {
+      "name": "Quantum Compiler",
+      "repository": "MysticFragilist/quantum-compiler",
+      "description": "A simple implementation of the PCOAST compilation technique for quantum gate compiling",
+      "visibility": "public",
+      "lastUpdated": "8d",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/quantum-compiler"
+    },
+    {
+      "name": "Convo Buddy GPT",
+      "repository": "MysticFragilist/Convo-Buddy-GPT",
+      "description": "An AI conversational buddy. Converts voice to text, processes with GPT, then responds with voice.",
+      "visibility": "public",
+      "lastUpdated": "Apr 25, 2023",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/Convo-Buddy-GPT"
+    },
+    {
+      "name": "ClAi",
+      "repository": "MysticFragilist/ClAi",
+      "description": "A CLI tool to process text to command using GPT-3",
+      "visibility": "public",
+      "lastUpdated": "Jan 16, 2023",
+      "imageUrl": "/assets/projects/clai_logo.png",
+      "url": "https://github.com/MysticFragilist/ClAi"
+    },
+    {
+      "name": "Crispy Enigma",
+      "repository": "MysticFragilist/crispy-enigma",
+      "description": "A McDonald's shift parser from email that creates a schedule in your outlook calendar",
+      "visibility": "public",
+      "lastUpdated": "Feb 24, 2022",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/crispy-enigma"
+    },
+    {
+      "name": "Akinator",
+      "repository": "MysticFragilist/Akinator",
+      "description": "A C++ project for the structure of data course, implementing a binary tree",
+      "visibility": "public",
+      "lastUpdated": "Feb 24, 2022",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/Akinator"
+    },
+    {
+      "name": "ÉTSMobile 4.0",
+      "repository": "MysticFragilist/Notre-Dame",
+      "description": "The 4th generation of ÉTSMobile, forked for CI testing purposes.",
+      "visibility": "public, fork",
+      "lastUpdated": "Jan 29, 2022",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/Notre-Dame"
+    },
+    {
+      "name": "Tiny QR Routing",
+      "repository": "MysticFragilist/tiny-qr-routing",
+      "description": "A tiny QR Code rerouting tool for mobile applications.",
+      "visibility": "public",
+      "lastUpdated": "Oct 21, 2021",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/tiny-qr-routing"
+    },
+    {
+      "name": "Smurf2020",
+      "repository": "MysticFragilist/Smurf2020",
+      "description": "Networking game for the Second Valleyfield Gamejam competition, won 3rd place.",
+      "visibility": "public",
+      "lastUpdated": "Feb 10, 2021",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/Smurf2020"
+    },
+    {
+      "name": "Boilerplate Unity 2020 template",
+      "repository": "MysticFragilist/3rdPersonPlayerBoilerplate",
+      "description": "A third person Unity 2020.1 boilerplate project with popular features.",
+      "visibility": "public",
+      "lastUpdated": "Sep 5, 2020",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/3rdPersonPlayerBoilerplate"
+    },
+    {
+      "name": "Mini Torrent",
+      "repository": "MysticFragilist/mini-torrent",
+      "description": "A simple CLI implementation of a torrent system for Linux and Windows OS.",
+      "visibility": "public",
+      "lastUpdated": "Aug 7, 2020",
+      "imageUrl": null,
+      "url": "https://github.com/MysticFragilist/mini-torrent"
+    }
+  ],
+  "experiences": [
+    {
+      "business": "Ubisoft Montréal",
+      "title": "Tools Programmer",
+      "startDate": "2023-05-01",
+      "endDate": "Present",
+      "imageUrl": "/assets/experiences/Logo_Ubisoft_Montreal.png",
+      "description": "Working as a Tools Programmer at Ubisoft Montréal."
+    },
+    {
+      "business": "Fusion Contact",
+      "title": "Full-stack Developer",
+      "startDate": "2020-05-01",
+      "endDate": "2023-05-01",
+      "imageUrl": null,
+      "description": "Developed a complete solution for an enterprise-grade CRM:\n• Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc.\n• Developed a Web App using Vue.JS and the Vuexy framework, utilizing features like google maps API, bootstrap-vue, JWT login, etc.\n• Documented the technical aspects of the project using VuePress.\n• Deployed the solution on Azure Web app and Azure Static Web App using custom CI/CD script (Github actions).\n• Managed issue tracking (Github) and project management, overseeing 2 other part-time developers who assisted in building the solution.\n• Refactored and added functionality to an old codebase in VB.NET."
+    },
+    {
+      "business": "Intact",
+      "title": "Devops intern",
+      "startDate": "2022-01-01",
+      "endDate": "2022-04-01",
+      "imageUrl": null,
+      "description": "Supported and built a CI/CD solution for internal projects. Utilized recent technologies including: python, go, github actions, maven, etc."
+    },
+    {
+      "business": "CAE",
+      "title": "Software Developer",
+      "startDate": "2019-05-01",
+      "endDate": "2020-04-01",
+      "imageUrl": null,
+      "description": ".NET intern and part-time job during school.\n- Refactored a PDF parser software written in c# and added features.\n- Migrated project to git source control for my team."
+    },
+    {
+      "business": "AltiLogix Inc.",
+      "title": "Software Developer",
+      "startDate": "2018-05-01",
+      "endDate": "2018-08-01",
+      "imageUrl": null,
+      "description": "Fixed bugs and developed features for a CRM software used in schools and school boards across Québec."
+    },
+    {
+      "business": "McDonald's",
+      "title": "Team Trainer",
+      "startDate": "2014-05-01",
+      "endDate": "2018-05-01",
+      "imageUrl": "/assets/experiences/McD-squareLogo.png",
+      "description": "Worked as a team trainer at McDonald's during my high school years."
+    }
+  ],
+  "education": [
+    {
+      "school": "École de technologie supérieure (ÉTS)",
+      "degree": "Génie logiciel",
+      "startDate": "2021-09-01",
+      "endDate": "Present",
+      "description": "Currently studying Software Engineering since the fall of 2021.\n• Named Captain of ApplETS, a scientific club focused on mobile development. Working on and maintaining ÉTSMobile 4.0, an application that allows students to view their grades, schedules, and important links. Used by over 10,000 students at my school.\n• Organized 3 events with key contributors (Intact and BNC) from ApplETS and held weekly meetings for the past year with our members.\n• Completed a course on algorithms (graphs, trees, search algorithms).\n• GPA: 3.46"
+    },
+    {
+      "school": "Cégep de Bois-de-Boulogne",
+      "degree": "Technique d’informatique volet gestion",
+      "startDate": "2019-05-01",
+      "endDate": "2019-05-31",
+      "description": "Completed my DEC in Computer Science with a focus on management. Participated and nominated as the president of the security club in 2018 and 2019.\n• With the club, conducted evening courses on software security and organized a CTF (Capture The Flag) hacking competition between schools."
+    },
+    {
+      "school": "Armand-Corbeil Secondary School",
+      "degree": "Programme d’Éducation Internationale (PEI)",
+      "startDate": "Your Start Date Here",
+      "endDate": "Your End Date Here",
+      "description": "Designed a prototype for a dog food dispenser robot."
+    }
+  ]
+}

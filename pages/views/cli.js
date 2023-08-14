@@ -1,9 +1,9 @@
-import useWindowSize from "../hooks/use-windows";
-import usePersistLocaleCookie from "../hooks/use-persist-locale-cookie";
+import useWindowSize from "../../hooks/use-windows";
+import usePersistLocaleCookie from "../../hooks/use-persist-locale-cookie";
 import useTranslation from 'next-translate/useTranslation';
 import setLanguage from 'next-translate/setLanguage';
 import { ReactTerminal } from "react-terminal";
-import { i18n } from "../i18n"
+import { i18n } from "../../i18n"
 
 function createAsciiArt() {
   return (<pre>

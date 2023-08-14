@@ -11,6 +11,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'material-icons/iconfont/material-icons.css'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()

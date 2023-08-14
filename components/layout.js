@@ -27,8 +27,7 @@ export default function Layout(props) {
           rel="noopener noreferrer"
           className="linkPowered"
         >
-          Powered by{' '}
-          <Image src="/Nextjs-logo.svg" alt="Vercel" className="logo" />
+          Made by Samuel Montambault
         </a>
       </footer>
 

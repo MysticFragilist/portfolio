@@ -6,21 +6,21 @@ import Link from 'next/link';
 export default function NavBar(props) {
   return (
   <div>
-    <ul>
+    <ul style= {{ margin: 5 }}>
       <li><Link href="/about">
-        <FontAwesomeIcon icon={faBook} style={{ opacity: 1 }} /></Link>
+        <FontAwesomeIcon icon={faBook} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
       <li><Link href="/experiences">
-        <FontAwesomeIcon icon={faBriefcase} /></Link>
+        <FontAwesomeIcon icon={faBriefcase} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
       <li><Link href="/home">
-        <FontAwesomeIcon icon={faHome} size="lg" />
+        <FontAwesomeIcon icon={faHome} style={{ opacity: 1, color:'white', }} size="xl" />
         </Link></li>
       <li><Link href="/projects">
-        <FontAwesomeIcon icon={faCubes} /></Link>
+        <FontAwesomeIcon icon={faCubes} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
       <li><Link href="/cli">
-        <FontAwesomeIcon icon={faCode} /></Link>
+        <FontAwesomeIcon icon={faCode} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
     </ul>
     <style jsx>{`
@@ -36,8 +36,18 @@ export default function NavBar(props) {
         
         li {
           display: inline-block;
+          margin-left: 1em;
+          color: white;
         }
-        
+
+        .iconMenu{
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
         li a {
           display: block;
           color: white;

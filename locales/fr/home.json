@@ -4,8 +4,9 @@
   "created": "Créé et maintenu par ",
   "projects-title": "Projets",
   "projects-description": "Explorez mes projets récents et antérieurs.",
+  "cli-description": "Explorez ce site à l'aide d'un outil de ligne de commande!",
   "experiences-title": "Expériences",
-  "experiences-description": "Explorez mes expériences récentes et antérieures.",
+  "experiences-description": "Explorez toutes mes expériences de travail récentes et antérieures.",
   "about-title": "À propos de moi",
-  "about-description": "Découvrez moi et quelques point marquant de mon expérience de développeur."
+  "about-description": "Découvrez mon profil de développeur."
 }

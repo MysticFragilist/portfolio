@@ -48,11 +48,11 @@ export default function Home() {
             <FontAwesomeIcon icon={faCode} />&nbsp;
             <h3 className="inline">Sam CLI &rarr;</h3>
             <Badge bg="primary" pill="true" style={{ display: "inline-block", float: "right" }}>new</Badge>
-            <p>Explore my portfolio with an integrated command line!</p>
+            <p>{t('cli-description')}</p>
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            onClick={() => router.push('/views/experiences')}
             className="linkcard"
           >
             <FontAwesomeIcon icon={faBriefcase} />&nbsp;
