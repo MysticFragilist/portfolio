@@ -7,19 +7,19 @@ export default function NavBar(props) {
   return (
   <div>
     <ul>
-      <li><Link href="/about">
+      <li><Link href="/views/about">
         <FontAwesomeIcon icon={faBook} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
-      <li><Link href="/experiences">
+      <li><Link href="/views/experiences">
         <FontAwesomeIcon icon={faBriefcase} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
-      <li><Link href="/home">
+      <li><Link href="/views/home">
         <FontAwesomeIcon icon={faHome} style={{ opacity: 1, color:'white', }} size="xl" />
         </Link></li>
-      <li><Link href="/projects">
+      <li><Link href="/views/projects">
         <FontAwesomeIcon icon={faCubes} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
-      <li><Link href="/cli">
+      <li><Link href="/views/cli">
         <FontAwesomeIcon icon={faCode} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
     </ul>
