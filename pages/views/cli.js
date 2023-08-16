@@ -6,12 +6,42 @@ import { ReactTerminal } from "react-terminal";
 import { i18n } from "../../i18n"
 
 function createAsciiArt() {
-  return (<pre>
- ____ ____ ____ <br />
-||p |||r |||e ||<br />
-||__|||__|||__||<br />
-|/__\|/__\|/__\|<br />
-</pre>)
+  const pythonCode = `
+    _____                                 _   __  __                _                     _                    _  _   
+   / ____|                               | | |  \\/  |              | |                   | |                  | || |  
+  | (___    __ _  _ __ ___   _   _   ___ | | | \\  / |  ___   _ __  | |_  __ _  _ __ ___  | |__    __ _  _   _ | || |_ 
+   \\___ \\  / _\` || '_ \` _ \\ | | | | / _ \\| | | |\\/| | / _ \\ | '_ \\ | __|/ _\` || '_ \` _ \\ | '_ \\  / _\` || | | || || __|
+   ____) || (_| || | | | | || |_| ||  __/| | | |  | || (_) || | | || |_| (_| || | | | | || |_) || (_| || |_| || || |_ 
+  |_____/  \\__,_||_| |_| |_| \\__,_| \\___||_| |_|  |_| \\___/ |_| |_| \\__|\\__,_||_| |_| |_||_.__/  \\__,_| \\__,_||_| \\__|
+  `;
+
+  return (<pre>{pythonCode}</pre>)
+}
+
+async function createExperiencesCommand(locale, t) {
+  const res = await fetch('/api/data')
+  const data = await res.json();
+  const evalData = JSON.parse(data);
+  console.log(evalData);
+  const rows = [];
+  for (let i = 0; i < evalData.experiences.length; i++) {
+    rows.push(
+      <tr>
+        <td><code>{evalData.experiences[i].business}</code></td>
+        <td>{evalData.experiences[i].title}</td>
+        <td dangerouslySetInnerHTML={{__html: evalData.experiences[i].description}} />
+        <td>{evalData.experiences[i].startDate+' > '+evalData.experiences[i].endDate}</td>
+      </tr>);
+  }
+  return (<table>
+    <tr>
+      <th>Business</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Dates</th>
+    </tr>
+    {rows}
+  </table>)
 }
 
 async function createLanguageCommand(locale, t, paramLang) {
@@ -62,6 +92,9 @@ function createCommands(locale, t) {
     whoami: () => (<p style={{ display: "inline" }}>{createAsciiArt()}Samuel Montambault<br />MysticFragilist</p>),
     language: (lang) => createLanguageCommand(locale, t, lang),
     lang: (lang) => createLanguageCommand(locale, t, lang),
+    exp: () => createExperiencesCommand(locale, t),
+    experiences: () => createExperiencesCommand(locale, t),
+    projects: () => (<p style={{ display: "inline" }}>Coming soon!</p>),
   };
 }
 
@@ -88,11 +121,8 @@ export default function Terminal() {
           }
         />
       </div>
-      <style css>{`
-        .terminal {
-          scrollbar-color: dark;
-        }
-      `}</style>
+
+      
       <style jsx>{`
       .container {
         min-height: 100vh;
@@ -111,6 +141,11 @@ export default function Terminal() {
         height: ${sizes.height *0.8}px;
         overflow: hidden;
       }
+
+      #terminalEditor {
+        height: calc(100% - 66px);
+      }
+
       .terminal {
         scrollbar-color: dark;
       }

@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function NavBar(props) {
   return (
   <div>
-    <ul style= {{ margin: 5 }}>
+    <ul>
       <li><Link href="/about">
         <FontAwesomeIcon icon={faBook} style={{ opacity: 1, color:'white', }} /></Link>
       </li>
@@ -30,7 +30,6 @@ export default function NavBar(props) {
           padding: 0;
           overflow: hidden;
           background-color: transparent;
-          border-bottom: 1px solid #393D47;
           text-align: center;
         }
         

@@ -117,15 +117,15 @@
       "title": "Full-stack Developer",
       "startDate": "2020-05-01",
       "endDate": "2023-05-01",
-      "imageUrl": null,
-      "description": "Developed a complete solution for an enterprise-grade CRM:\n• Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc.\n• Developed a Web App using Vue.JS and the Vuexy framework, utilizing features like google maps API, bootstrap-vue, JWT login, etc.\n• Documented the technical aspects of the project using VuePress.\n• Deployed the solution on Azure Web app and Azure Static Web App using custom CI/CD script (Github actions).\n• Managed issue tracking (Github) and project management, overseeing 2 other part-time developers who assisted in building the solution.\n• Refactored and added functionality to an old codebase in VB.NET."
+      "imageUrl": "/assets/experiences/fusion-contact-telemarketing-logo.png",
+      "description": "Developed a complete solution for an enterprise-grade CRM:<ul><li>Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc.</li><li>Developed a Web App using Vue.JS and the Vuexy framework, utilizing features like google maps API, bootstrap-vue, JWT login, etc.</li><li>Documented the technical aspects of the project using VuePress.</li><li>Deployed the solution on Azure Web app and Azure Static Web App using custom CI/CD script (Github actions).</li><li>Managed issue tracking (Github) and project management, overseeing 2 other part-time developers who assisted in building the solution.</li><li>Refactored and added functionality to an old codebase in VB.NET.</li></ul>"
     },
     {
       "business": "Intact",
       "title": "Devops intern",
       "startDate": "2022-01-01",
       "endDate": "2022-04-01",
-      "imageUrl": null,
+      "imageUrl": "/assets/experiences/INTACT_LOGO_NO_TRILINES.png",
       "description": "Supported and built a CI/CD solution for internal projects. Utilized recent technologies including: python, go, github actions, maven, etc."
     },
     {
@@ -133,7 +133,7 @@
       "title": "Software Developer",
       "startDate": "2019-05-01",
       "endDate": "2020-04-01",
-      "imageUrl": null,
+      "imageUrl": "/assets/experiences/CAE_inc._logo_2022.svg.png",
       "description": ".NET intern and part-time job during school.\n- Refactored a PDF parser software written in c# and added features.\n- Migrated project to git source control for my team."
     },
     {
@@ -141,7 +141,7 @@
       "title": "Software Developer",
       "startDate": "2018-05-01",
       "endDate": "2018-08-01",
-      "imageUrl": null,
+      "imageUrl": "/assets/experiences/Altilogix-20-ans.png",
       "description": "Fixed bugs and developed features for a CRM software used in schools and school boards across Québec."
     },
     {
@@ -149,7 +149,7 @@
       "title": "Team Trainer",
       "startDate": "2014-05-01",
       "endDate": "2018-05-01",
-      "imageUrl": "/assets/experiences/McD-squareLogo.png",
+      "imageUrl": "/assets/experiences/McDonald's_Golden_Arches.svg.png",
       "description": "Worked as a team trainer at McDonald's during my high school years."
     }
   ],

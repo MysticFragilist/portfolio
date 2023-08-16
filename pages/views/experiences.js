@@ -3,27 +3,30 @@ import { faCode, faCubes, faBriefcase, faBook } from "@fortawesome/free-solid-sv
 import useTranslation from 'next-translate/useTranslation';
 import useSWR from 'swr';
 import Image from "next/image"
+import Card from 'react-bootstrap/Card';
+import SpecialOrbShower from "../../components/special-orb-shower";
+import Carousel from 'react-bootstrap/Carousel';
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function ObjectRow(experience) {
-    const image = experience.imageUrl ? (<Image
-      src={experience.imageUrl}
-      width={60}
-      height={60}
-      alt="test"
-      style={{ float: "left", display: "inline-block", marginTop: 5, marginRight: 10 }}
-    />) : (<FontAwesomeIcon icon={faBriefcase} style={{ float: "left", display: "inline-block", marginTop: 6, marginRight: 10 }} size="3x" />);
-
-    return (
-      <div key={experience.business+experience.title} className="linkcard">
-          {image}
-          <h3>{experience.business}</h3>
-          <b>{experience.title}</b>
-          <p>{experience.description}</p>
-        </div>
-    );
+      return (
+        <Card 
+          bg="dark"
+          text="white"
+          style={{width: '41vh', margin: 10 }}
+          key={experience.business+experience.title} className="linkcard">
+            <Card.Img variant="left" src={experience.imageUrl} />
+            <Card.Body>
+              <Card.Title><b>{experience.business}</b></Card.Title>
+              <Card.Text>
+                <b>{experience.title}</b>
+              </Card.Text>
+              <div style={{ fontSize:13}} dangerouslySetInnerHTML={{__html: experience.description}} />
+            </Card.Body>
+          </Card>
+      );
 }
 
 export default function Experiences() {
@@ -44,7 +47,6 @@ export default function Experiences() {
         <h1 className="title">
           {t('title')}
         </h1>
-        
         <div className="grid">
           {rows}
         </div>
@@ -92,35 +94,9 @@ export default function Experiences() {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-
-          max-width: 800px;
           margin-top: 3rem;
         }
 
-        .linkcard {
-          margin: 1rem;
-          flex-basis: 100%;
-          display: inline-block;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .linkcard h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .linkcard p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-        
         .inline {
           display: inline-block;
         }

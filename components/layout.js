@@ -21,14 +21,7 @@ export default function Layout(props) {
       </style>
 
       <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="linkPowered"
-        >
           Made by Samuel Montambault
-        </a>
       </footer>
 
       <style jsx>{`
