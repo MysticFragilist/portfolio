@@ -1,47 +1,61 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faCode, faCubes, faBriefcase, faBook } from "@fortawesome/free-solid-svg-icons";
 
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import Boop from '../components/boop';
 import Link from 'next/link';
+
+function LinkWithTooltip({ id, children, href, tooltip }) {
+  return (
+    <OverlayTrigger
+      overlay={<Tooltip id={id}>{tooltip}</Tooltip>}
+      placement="bottom"
+      delayShow={300}
+      delayHide={150}
+    >
+      <Link href={href}>{children}</Link>
+    </OverlayTrigger>
+  );
+}
 
 export default function NavBar(props) {
   return (
   <div>
     <ul>
       <li>
-        <Link href="/views/about">
+        <LinkWithTooltip href="/views/about" tooltip="About Me 🙆‍♂️">
           <Boop x={-4} y={4} timing={200}>
-            <FontAwesomeIcon icon={faBook} style={{ opacity: 1, color:'white', }} />
+              <FontAwesomeIcon icon={faBook} style={{ opacity: 1, color:'white', }} />
           </Boop>
-        </Link>
+        </LinkWithTooltip>
       </li>
       <li>
-        <Link href="/views/experiences">
+        <LinkWithTooltip href="/views/experiences" tooltip="My experiences 💼">
           <Boop rotation={-20} timing={200}>
             <FontAwesomeIcon icon={faBriefcase} style={{ opacity: 1, color:'white', }} />
           </Boop>
-        </Link>
+        </LinkWithTooltip>
       </li>
       <li>
-        <Link href="/home">
+        <LinkWithTooltip href="/home" tooltip="Home 🏡">
           <Boop scale={1.3} timing={200}>
             <FontAwesomeIcon icon={faHome} style={{ opacity: 1, color:'white', }} size="xl" />
           </Boop>
-        </Link>
+        </LinkWithTooltip>
       </li>
       <li>
-        <Link href="/views/projects">
+        <LinkWithTooltip href="/views/projects" tooltip="Home 🚀">
           <Boop rotation={20} timing={200}>
             <FontAwesomeIcon icon={faCubes} style={{ opacity: 1, color:'white', }} />
           </Boop>
-        </Link>
+        </LinkWithTooltip>
       </li>
       <li>
-        <Link href="/views/cli">
+        <LinkWithTooltip href="/views/cli" tooltip="Sam CLI 📱">
           <Boop x={4} y={4} timing={200}>
             <FontAwesomeIcon icon={faCode} style={{ opacity: 1, color:'white', }} />
           </Boop>
-        </Link>
+        </LinkWithTooltip>
       </li>
     </ul>
     <style jsx>{`
