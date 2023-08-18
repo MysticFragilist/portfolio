@@ -1,11 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faCubes, faBriefcase, faBook } from "@fortawesome/free-solid-svg-icons";
 import useTranslation from 'next-translate/useTranslation';
 import useSWR from 'swr';
-import Image from "next/image"
+import { Badge } from "react-bootstrap";
 import Card from 'react-bootstrap/Card';
-import SpecialOrbShower from "../../components/special-orb-shower";
-import Carousel from 'react-bootstrap/Carousel';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import FastfoodIcon from '@mui/icons-material/Fastfood';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import HotelIcon from '@mui/icons-material/Hotel';
+import RepeatIcon from '@mui/icons-material/Repeat';
+import Typography from '@mui/material/Typography';
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -25,6 +34,9 @@ function ObjectRow(experience) {
               <Card.Text>
                 <b>{experience.title}</b>
               </Card.Text>
+              <div className='badgeArea'>
+                <Badge bg="primary">Devops</Badge>
+              </div>
               <div style={{ fontSize:13}} dangerouslySetInnerHTML={{__html: experience.description}} />
             </Card.Body>
           </Card>
@@ -49,9 +61,84 @@ export default function Experiences() {
         <h1 className="title">
           {t('title')}
         </h1>
-        <div className="grid">
-          {rows}
-        </div>
+        <Timeline position="alternate">
+          <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: 'auto 0' }}
+              align="right"
+              variant="body2"
+            >
+              <div className='dataCircle'>
+                <h5 style={{ borderBottom: "1px solid" }}>2 years</h5>
+                <h6>From 2018</h6>
+              </div>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot>
+                <FontAwesomeIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <h5>
+                Eat
+              </h5>
+              <Typography>Because you need strength</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: 'auto 0' }}
+              variant="body2"
+            >
+              10:00 am
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color="primary">
+                <LaptopMacIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <Typography variant="h6" component="span">
+                Code
+              </Typography>
+              <Typography>Because it&apos;s awesome!</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color="primary" variant="outlined">
+                <HotelIcon />
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <Typography variant="h6" component="span">
+                Sleep
+              </Typography>
+              <Typography>Because you need rest</Typography>
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+              <TimelineDot color="secondary">
+                <RepeatIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <Typography variant="h6" component="span">
+                Repeat
+              </Typography>
+              <Typography>Because this is the life you love!</Typography>
+            </TimelineContent>
+          </TimelineItem>
+        </Timeline>
       </main>
 
       <style jsx>{`
@@ -60,10 +147,23 @@ export default function Experiences() {
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: left;
           align-items: center;
           background-color: transparent;
           color: #F9F9F9;
+        }
+
+        .dataCircle {
+          width: 100px;
+          height: 100px;
+          flex: 1;
+          flex-direction: column;
+          display: flex;
+          border-radius: 50%;
+          background-color: #1976d2;
+          color: black;
+          justify-content: center;
+          align-items: center;
         }
 
         main {
@@ -78,6 +178,11 @@ export default function Experiences() {
         .description {
           line-height: 1.5;
           font-size: 1.5rem;
+        }
+
+        .badgeArea {
+          display: block;
+          width: 100%;
         }
 
         code {

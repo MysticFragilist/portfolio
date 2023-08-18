@@ -109,6 +109,7 @@
       "title": "Tools Programmer",
       "startDate": "2023-05-01",
       "endDate": "Present",
+      "tags": ["Tools", ".NET", "Python"],
       "imageUrl": "/assets/experiences/Logo_Ubisoft_Montreal.png",
       "description": "Working as a Tools Programmer at Ubisoft Montréal."
     },
@@ -117,6 +118,7 @@
       "title": "Full-stack Developer",
       "startDate": "2020-05-01",
       "endDate": "2023-05-01",
+      "tags": ["Tools", ".NET", "Python"],
       "imageUrl": "/assets/experiences/fusion-contact-telemarketing-logo.png",
       "description": "Developed a complete solution for an enterprise-grade CRM:Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc."
     },
