@@ -118,7 +118,7 @@
       "startDate": "2020-05-01",
       "endDate": "2023-05-01",
       "imageUrl": "/assets/experiences/fusion-contact-telemarketing-logo.png",
-      "description": "Developed a complete solution for an enterprise-grade CRM:<ul><li>Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc.</li><li>Developed a Web App using Vue.JS and the Vuexy framework, utilizing features like google maps API, bootstrap-vue, JWT login, etc.</li><li>Documented the technical aspects of the project using VuePress.</li><li>Deployed the solution on Azure Web app and Azure Static Web App using custom CI/CD script (Github actions).</li><li>Managed issue tracking (Github) and project management, overseeing 2 other part-time developers who assisted in building the solution.</li><li>Refactored and added functionality to an old codebase in VB.NET.</li></ul>"
+      "description": "Developed a complete solution for an enterprise-grade CRM:Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc."
     },
     {
       "business": "Intact",

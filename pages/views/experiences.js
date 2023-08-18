@@ -15,9 +15,11 @@ function ObjectRow(experience) {
         <Card 
           bg="dark"
           text="white"
-          style={{width: '41vh', margin: 10 }}
+          style={{width: '20vh', height:'35vh', margin: 10 }}
           key={experience.business+experience.title} className="linkcard">
-            <Card.Img variant="left" src={experience.imageUrl} />
+            <Card.Img variant="left" src={experience.imageUrl} style={
+              { margin: 10,
+              }} />
             <Card.Body>
               <Card.Title><b>{experience.business}</b></Card.Title>
               <Card.Text>
@@ -93,7 +95,6 @@ export default function Experiences() {
           display: flex;
           align-items: center;
           justify-content: center;
-          flex-wrap: wrap;
           margin-top: 3rem;
         }
 
