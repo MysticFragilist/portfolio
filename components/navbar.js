@@ -13,7 +13,9 @@ function LinkWithTooltip({ id, children, href, tooltip }) {
       delayShow={300}
       delayHide={150}
     >
-      <Link href={href}>{children}</Link>
+      <span style={{ display: 'inline-block', width: 40, height: 40, verticalAlign: 'middle', textAlign: 'center', lineHeight: '40px' }}>
+        <Link href={href} style={{ display: 'inline-block', width: '100%', height: '100%' }}>{children}</Link>
+      </span>
     </OverlayTrigger>
   );
 }
@@ -44,7 +46,7 @@ export default function NavBar(props) {
         </LinkWithTooltip>
       </li>
       <li>
-        <LinkWithTooltip href="/views/projects" tooltip="Home 🚀">
+        <LinkWithTooltip href="/views/projects" tooltip="Projects 🚀">
           <Boop rotation={20} timing={200}>
             <FontAwesomeIcon icon={faCubes} style={{ opacity: 1, color:'white', }} />
           </Boop>

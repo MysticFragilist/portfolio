@@ -30,7 +30,7 @@ export default function Experiences() {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
+          height: 100vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;

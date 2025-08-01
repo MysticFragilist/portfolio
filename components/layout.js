@@ -20,30 +20,10 @@ export default function Layout(props) {
         {globalStyles}
       </style>
 
-      <footer>
-          Made by Samuel Montambault
-      </footer>
-
       <style jsx>{`
         a {
           color: inherit;
           text-decoration: none;
-        }
-        footer {
-          z-index: 5;
-          border-top: 1px solid #393D47;
-          background-color: #2D3139;
-          width: 100%;
-          height: 100px;
-          display: flex;
-          justify-content: center;
-          text-align: center;
-          align-items: center;
-          margin-bottom: 1%; 
-        }
-
-        footer img {
-          margin-left: 0.5rem;
         }
         .logo {
           height: 1.5em;

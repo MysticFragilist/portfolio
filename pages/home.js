@@ -76,7 +76,7 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
+          height: 95vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -87,7 +87,6 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -162,13 +161,11 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-
           max-width: 800px;
-          margin-top: 3rem;
         }
 
         .linkcard {
-          margin: 1rem;
+          margin: 0.5rem;
           flex-basis: 45%;
           padding: 1.5rem;
           text-align: left;

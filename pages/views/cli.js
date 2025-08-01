@@ -125,13 +125,13 @@ export default function Terminal() {
       
       <style jsx>{`
       .container {
-        min-height: 100vh;
+        height: 100vh;
         padding: 0 0.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #2D3139;
+        background-color: transparent;
         color: #F9F9F9;
       }
       .cli {
