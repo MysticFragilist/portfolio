@@ -1,7 +1,32 @@
 {
   "name": "Samuel Montambault",
-  "short_name": "Sam",
+  "shortName": "Sam",
   "description": "Samuel Montambault's personal website",
+  "longDescription": "Hi I'm Sam! 😄 I'm a software developer who is passionate about a lot of things from designing a database structure to building a rich UI experience! I'm currently working for Fusion-Contact as a full-stack developer.",
+  "currentJob": "Software Developer at Intact",
+  "handle": "MysticFragilist",
+  "picture": "/assets/profile/profile.png",
+  "location": "Montréal, QC, Canada",
+  "tags": ["Software Development", "Devops", "Tools", "Coding", "Github", "CI/CD", "Python", ".NET", "React", "Vue.JS", "Java", "C++", "Docker", "Kubernetes", "Git", "SQL", "NoSQL", "Linux", "Windows", "MacOS"],
+  "hobbies": [
+    {"name": "Coding", "icon": "💻"},
+    {"name": "Reading", "icon": "📚"},
+    {"name": "Cooking", "icon": "👨‍🍳"},
+    {"name": "Traveling", "icon": "✈️"},
+    {"name": "Hiking", "icon": "🏔️"},
+    {"name": "Quantum", "icon": "⚛️"},
+    {"name": "Board Games", "icon": "🎲"}
+  ],
+  "links": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/samuel-montambault-62b543114/"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/MysticFragilist"
+    }
+  ],
   "projects": [
     {
       "name": "Computercraft Blockchain",
@@ -105,10 +130,28 @@
   ],
   "experiences": [
     {
+      "business": "Intact",
+      "title": "Software Developer",
+      "tags": ["Java", "React"],
+      "startDate": "2025-02-01",
+      "endDate": "Present",
+      "imageUrl": "/assets/experiences/INTACT_LOGO_NO_TRILINES.png",
+      "description": "Supported and built a CI/CD solution for internal projects. Utilized recent technologies including: python, go, github actions, maven, etc."
+    },
+    {
+      "business": "Fusion Contact",
+      "title": "Senior Software Developer",
+      "startDate": "2023-09-01",
+      "endDate": "Present",
+      "tags": ["CRM", ".NET", "Vue.JS"],
+      "imageUrl": "/assets/experiences/fusion-contact-telemarketing-logo.png",
+      "description": "Developed a complete solution for an enterprise-grade CRM: Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc."
+    },
+    {
       "business": "Ubisoft Montréal",
       "title": "Tools Programmer",
       "startDate": "2023-05-01",
-      "endDate": "Present",
+      "endDate": "2023-09-01",
       "tags": ["Tools", ".NET", "Python"],
       "imageUrl": "/assets/experiences/Logo_Ubisoft_Montreal.png",
       "description": "Working as a Tools Programmer at Ubisoft Montréal."
@@ -118,13 +161,14 @@
       "title": "Full-stack Developer",
       "startDate": "2020-05-01",
       "endDate": "2023-05-01",
-      "tags": ["Tools", ".NET", "Python"],
+      "tags": ["CRM", ".NET", "Vue.JS"],
       "imageUrl": "/assets/experiences/fusion-contact-telemarketing-logo.png",
-      "description": "Developed a complete solution for an enterprise-grade CRM:Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc."
+      "description": "Developed a complete solution for an enterprise-grade CRM: Development of an API with .NET7, including features like SignalR data transfer, EFCore ORM, Background Worker, Controller/Services architecture design, etc."
     },
     {
       "business": "Intact",
       "title": "Devops intern",
+      "tags": ["Devops", "Python", "Github Actions"],
       "startDate": "2022-01-01",
       "endDate": "2022-04-01",
       "imageUrl": "/assets/experiences/INTACT_LOGO_NO_TRILINES.png",
@@ -133,14 +177,16 @@
     {
       "business": "CAE",
       "title": "Software Developer",
+      "tags": [".NET", "Tools", "Bash"],
       "startDate": "2019-05-01",
       "endDate": "2020-04-01",
       "imageUrl": "/assets/experiences/CAE_inc._logo_2022.svg.png",
-      "description": ".NET intern and part-time job during school.\n- Refactored a PDF parser software written in c# and added features.\n- Migrated project to git source control for my team."
+      "description": ".NET intern and part-time job during school.<ul><li>Refactored a PDF parser software written in c# and added features.</li><li>Migrated project to git source control for my team.</li></ul>"
     },
     {
       "business": "AltiLogix Inc.",
       "title": "Software Developer",
+      "tags": ["CRM", ".NET"],
       "startDate": "2018-05-01",
       "endDate": "2018-08-01",
       "imageUrl": "/assets/experiences/Altilogix-20-ans.png",
