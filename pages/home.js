@@ -33,7 +33,7 @@ export default function Home() {
 
         <div className="grid">
           <a
-            onClick={() => router.push('/views/about')}
+            onClick={() => router.push('/views/projects')}
             className="linkcard"
           >
             <FontAwesomeIcon icon={faCubes} />&nbsp;

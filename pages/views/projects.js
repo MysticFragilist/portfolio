@@ -33,57 +33,132 @@ export default function Projects() {
       <main>
         <h1 className="title">{t('projects-title') || 'Projects'}</h1>
         <div className="projects-grid">
-          {projects.map((project, idx) => {
-            const CardContent = (
-              <motion.div
-                key={idx}
-                className="project-card"
-                whileHover={{ rotate: -2 + Math.random() * 4, scale: 1.04, boxShadow: "0 8px 32px 0 rgba(25,118,210,0.25)" }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                tabIndex={0}
-                style={{ cursor: project.url ? 'pointer' : 'default' }}
-              >
-                {project.imageUrl && (
-                  <img src={project.imageUrl} alt={project.name} className="project-img-top-left" />
-                )}
-                <div className="project-content">
-                  <h2 className="project-title">{project.name}</h2>
-                  <p className="project-desc">{project.description}</p>
-                  <div className="project-links">
-                    {project.demo && (
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link" onClick={e => e.stopPropagation()}>
-                        <FontAwesomeIcon icon={faChrome} />
-                      </a>
-                    )}
+          {(() => {
+            const rows = [];
+            for (let i = 0; i < projects.length; i += 5) {
+              const row1 = projects.slice(i, i + 3);
+              const row2 = projects.slice(i + 3, i + 5);
+              
+              if (row1.length > 0) {
+                rows.push(
+                  <div key={`row-${i}-3`} className="project-row project-row-3">
+                    {row1.map((project, idx) => {
+                      const CardContent = (
+                        <motion.div
+                          key={idx}
+                          className="project-card"
+                          whileHover={{ rotate: -2 + Math.random() * 4, scale: 1.04, boxShadow: "0 8px 32px 0 rgba(25,118,210,0.25)" }}
+                          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                          tabIndex={0}
+                          style={{ cursor: project.url ? 'pointer' : 'default' }}
+                        >
+                          {project.imageUrl && (
+                            <img src={project.imageUrl} alt={project.name} className="project-img-top-left" />
+                          )}
+                          <div className="project-content">
+                            <h2 className="project-title">{project.name}</h2>
+                            <p className="project-desc">{project.description}</p>
+                            <div className="project-links">
+                              {project.demo && (
+                                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link" onClick={e => e.stopPropagation()}>
+                                  <FontAwesomeIcon icon={faChrome} />
+                                </a>
+                              )}
+                            </div>
+                            <div className="project-tags">
+                              {project.repository && (
+                                <Badge bg="secondary" className="project-repo">{project.repository}</Badge>
+                              )}
+                              {project.visibility && (
+                                <Badge bg="info" className="project-visibility">{project.visibility}</Badge>
+                              )}
+                              {project.lastUpdated && (
+                                <Badge bg="dark" className="project-updated">{project.lastUpdated}</Badge>
+                              )}
+                            </div>
+                          </div>
+                        </motion.div>
+                      );
+                      
+                      return project.url ? (
+                        <a
+                          key={idx}
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ textDecoration: 'none', color: 'inherit' }}
+                          tabIndex={0}
+                          aria-label={`Open ${project.name} on GitHub`}
+                        >
+                          {CardContent}
+                        </a>
+                      ) : CardContent;
+                    })}
                   </div>
-                  <div className="project-tags">
-                    {project.repository && (
-                      <Badge bg="secondary" className="project-repo">{project.repository}</Badge>
-                    )}
-                    {project.visibility && (
-                      <Badge bg="info" className="project-visibility">{project.visibility}</Badge>
-                    )}
-                    {project.lastUpdated && (
-                      <Badge bg="dark" className="project-updated">{project.lastUpdated}</Badge>
-                    )}
+                );
+              }
+              
+              if (row2.length > 0) {
+                rows.push(
+                  <div key={`row-${i}-2`} className="project-row project-row-2">
+                    {row2.map((project, idx) => {
+                      const CardContent = (
+                        <motion.div
+                          key={idx}
+                          className="project-card"
+                          whileHover={{ rotate: -2 + Math.random() * 4, scale: 1.04, boxShadow: "0 8px 32px 0 rgba(25,118,210,0.25)" }}
+                          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                          tabIndex={0}
+                          style={{ cursor: project.url ? 'pointer' : 'default' }}
+                        >
+                          {project.imageUrl && (
+                            <img src={project.imageUrl} alt={project.name} className="project-img-top-left" />
+                          )}
+                          <div className="project-content">
+                            <h2 className="project-title">{project.name}</h2>
+                            <p className="project-desc">{project.description}</p>
+                            <div className="project-links">
+                              {project.demo && (
+                                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link" onClick={e => e.stopPropagation()}>
+                                  <FontAwesomeIcon icon={faChrome} />
+                                </a>
+                              )}
+                            </div>
+                            <div className="project-tags">
+                              {project.repository && (
+                                <Badge bg="secondary" className="project-repo">{project.repository}</Badge>
+                              )}
+                              {project.visibility && (
+                                <Badge bg="info" className="project-visibility">{project.visibility}</Badge>
+                              )}
+                              {project.lastUpdated && (
+                                <Badge bg="dark" className="project-updated">{project.lastUpdated}</Badge>
+                              )}
+                            </div>
+                          </div>
+                        </motion.div>
+                      );
+                      
+                      return project.url ? (
+                        <a
+                          key={idx}
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ textDecoration: 'none', color: 'inherit' }}
+                          tabIndex={0}
+                          aria-label={`Open ${project.name} on GitHub`}
+                        >
+                          {CardContent}
+                        </a>
+                      ) : CardContent;
+                    })}
                   </div>
-                </div>
-              </motion.div>
-            );
-            return project.url ? (
-              <a
-                key={idx}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none', color: 'inherit' }}
-                tabIndex={0}
-                aria-label={`Open ${project.name} on GitHub`}
-              >
-                {CardContent}
-              </a>
-            ) : CardContent;
-          })}
+                );
+              }
+            }
+            return rows;
+          })()}
         </div>
         <style jsx>{`
           .container {
@@ -114,17 +189,35 @@ export default function Projects() {
             background-clip: text;
           }
           .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
             width: 100%;
           }
+          
+          .project-row {
+            display: flex;
+            gap: 2rem;
+            width: 100%;
+            justify-content: center;
+          }
+          
+          .project-row-3 .project-card {
+            width: 300px;
+            min-width: 300px;
+          }
+          
+          .project-row-2 .project-card {
+            width: 300px;
+            min-width: 300px;
+          }
+          
           .project-card {
-            background: rgba(30, 34, 54, 0.35);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
-            border: 1.5px solid rgba(66, 165, 245, 0.25);
-            box-shadow: 0 8px 32px 0 rgba(25,118,210,0.25);
-            padding: 1.5rem 1.5rem 1rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 24px 0 rgba(25,118,210,0.10);
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -132,6 +225,19 @@ export default function Projects() {
             color: #F9F9F9;
             position: relative;
             overflow: hidden;
+            flex: 1;
+            min-width: 0;
+            backdrop-filter: blur(10px);
+          }
+          
+          /* Force line breaks */
+          .project-card:nth-child(5n+3)::after,
+          .project-card:nth-child(5n+5)::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 0;
+            clear: both;
           }
           .project-img {
             width: 100px;
@@ -155,6 +261,7 @@ export default function Projects() {
           .project-content {
             width: 100%;
             text-align: center;
+            color: #F9F9F9;
           }
           .project-title {
             font-size: 1.3rem;
