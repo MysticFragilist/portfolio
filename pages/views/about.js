@@ -53,7 +53,7 @@ export default function About() {
         
         <div className="profile-section">
           <div className="profile-image">
-            <Image 
+            <img 
               src="/assets/profile.jpg" 
               alt={userData.name}
               onError={(e) => {

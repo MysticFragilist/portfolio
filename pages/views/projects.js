@@ -54,7 +54,7 @@ export default function Projects() {
                           style={{ cursor: project.url ? 'pointer' : 'default' }}
                         >
                           {project.imageUrl && (
-                            <Image src={project.imageUrl} alt={project.name} className="project-img-top-left" />
+                            <img src={project.imageUrl} alt={project.name} className="project-img-top-left" />
                           )}
                           <div className="project-content">
                             <h2 className="project-title">{project.name}</h2>
