@@ -1,5 +1,5 @@
 {
-  "title": "Terminal",
+  "title": "Command Line Interface",
   "commands": {
     "change-lang": "Change to {{locale}} locale successfully!"
   }

@@ -35,7 +35,7 @@ async function createExperiencesCommand(locale, t) {
   }
   return (<table>
     <tr>
-      <th>Business</th>
+      <th>Company</th>
       <th>Title</th>
       <th>Description</th>
       <th>Dates</th>
@@ -44,6 +44,31 @@ async function createExperiencesCommand(locale, t) {
   </table>)
 }
 
+async function createProjectsCommand(locale, t) {
+  const res = await fetch('/api/data')
+  const data = await res.json();
+  const evalData = JSON.parse(data);
+  console.log(evalData);
+  const rows = [];
+  for (let i = 0; i < evalData.projects.length; i++) {
+    rows.push(
+      <tr>
+        <td><code>{evalData.projects[i].name}</code></td>
+        <td>{evalData.projects[i].repository}</td>
+        <td>{evalData.projects[i].description}</td>
+        <td>{evalData.projects[i].lastUpdated}</td>
+      </tr>);
+  }
+  return (<table>
+    <tr>
+      <th>Name</th>
+      <th>Repository</th>
+      <th>Description</th>
+      <th>Last Updated</th>
+    </tr>
+    {rows}
+  </table>)
+}
 async function createLanguageCommand(locale, t, paramLang) {
   if (!paramLang || paramLang === "") {
     // Toggle if none is passed as parameters
@@ -94,7 +119,7 @@ function createCommands(locale, t) {
     lang: (lang) => createLanguageCommand(locale, t, lang),
     exp: () => createExperiencesCommand(locale, t),
     experiences: () => createExperiencesCommand(locale, t),
-    projects: () => (<p style={{ display: "inline" }}>Coming soon!</p>),
+    projects: () => (createProjectsCommand(locale, t)),
   };
 }
 

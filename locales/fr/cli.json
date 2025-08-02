@@ -1,5 +1,5 @@
 {
-  "title": "Terminal",
+  "title": "Invite de commande",
   "commands": {
     "change-lang": "Changement au language {{locale}} avec succès!"
   }
