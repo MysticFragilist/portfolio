@@ -4,6 +4,7 @@ import { Badge } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faChrome } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+import Image from 'next/image'
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -53,7 +54,7 @@ export default function Projects() {
                           style={{ cursor: project.url ? 'pointer' : 'default' }}
                         >
                           {project.imageUrl && (
-                            <img src={project.imageUrl} alt={project.name} className="project-img-top-left" />
+                            <Image src={project.imageUrl} alt={project.name} className="project-img-top-left" />
                           )}
                           <div className="project-content">
                             <h2 className="project-title">{project.name}</h2>

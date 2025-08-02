@@ -4,6 +4,7 @@ import { Badge } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import SpecialOrbShower from "../../components/special-orb-shower";
+import Image from 'next/image'
 
 //Write a fetcher function to wrap the native fetch function and return the result of a call to url in json format
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -52,7 +53,7 @@ export default function About() {
         
         <div className="profile-section">
           <div className="profile-image">
-            <img 
+            <Image 
               src="/assets/profile.jpg" 
               alt={userData.name}
               onError={(e) => {
