@@ -31,7 +31,7 @@ export default function Projects() {
   return (
     <div className="container">
       <main>
-        <h1 className="title">{t('projects-title') || 'Projects'}</h1>
+        <h1 className="title">{t('title') || 'Projects'}</h1>
         <div className="projects-grid">
           {(() => {
             const rows = [];
